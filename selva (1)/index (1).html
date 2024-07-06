@@ -1,0 +1,410 @@
+ <!-----META SECTION----->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <title> Portfolio Website</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="styles.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+ <script>
+  document.getElementById('download-pdf').addEventListener('click', function() {
+    const portfolioElement = document.querySelector('.portfolio');
+    const resumeElement = document.querySelector('.resume');
+
+    // Initialize jsPDF
+    const doc = new jsPDF();
+
+    // Add portfolio content
+    doc.text("Portfolio Content", 20, 15);
+    doc.fromHTML(portfolioElement, 20, 25);
+
+    // Add resume content
+    doc.addPage();
+    doc.text("Resume", 20, 15);
+    doc.fromHTML(resumeElement, 20, 25);
+
+    doc.save('portfolio_resume.pdf');
+});
+function toggleResponsiveMode() {
+    const screenWidth = window.innerWidth;
+    const htmlElement = document.documentElement;
+  
+    if (screenWidth <= 1024) {
+      htmlElement.classList.add('mobile-mode');
+    } else {
+      htmlElement.classList.remove('mobile-mode');
+    }
+  }
+
+  toggleResponsiveMode();
+  
+  window.addEventListener('resize', toggleResponsiveMode);
+
+if (window.innerWidth <= 1024 && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    alert("Please switch to desktop mode for better experience.");
+}
+  
+
+
+
+ </script>
+ </head>
+ <body>
+     <!-----MENU SECTION------>
+<div class="main-panel">
+    <div class="container">
+      <div class="width-33 logo">Port <span class="span-col">folio</span>
+      </div>
+      <div class="width-66">
+        <nav>
+          <a href="#">
+            <span class="span-col">Home</span>
+          </a>
+          <a href="#">About me</a>
+          <a href="#">Education</a>
+          <a href="#">My Services</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Testimonial</a>
+        </nav>
+      </div>
+    </div>
+    <!------MAIN BANNERR------>
+<div class="container ">
+    <div class="width-50">
+      <div class="banner-section">
+        <span class="span-col">Welcome To Prakash Engineering Works.com</span>
+        <h1>Selva<span class="span-col">Prakash</span>
+        </h1>
+        <h2>I specialize in full stack development with expertise in HTML, CSS, JavaScript, React, scalable web applications for exceptional user experiences.</h2>
+        <a href="https://www.facebook.com/selva.thangavel.900">  
+        <i class="fa fa-facebook"></i>
+        </a>
+        <!-- <a href="#">
+          <i class="fa fa-twitter"></i>
+        </a> -->
+        <a href="www.linkedin.com/in/selva-prakash-70a914267">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/selvakongu8658?igsh=cGdwZ2J4NnFvYjR5">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="https://github.com/selvapraksh8658">
+          <i class="fa fa-github"></i>
+        </a>
+      
+      </div>
+    </div>
+    <section class="resume">
+      <button id="download-pdf">
+          <a class="btnn" href="New folder/selva_resume.pdf" target="_blank">Download Resume PDF</a>
+      </button>
+  </section>
+    <div class="width-50" >
+      <img src="New folder/final.png">
+    </div>
+  </div>
+  </div>
+  <!------ABOUT US SECTION------>
+<div class="main-section bg-lightgrey">
+    <div class="container">
+      <div class="width-50" id="bg">
+        <img src="New folder/final.png" class="about-img">
+      </div>
+      <div class="width-50">
+        <div class="about-us">
+          <h2 class="heading-text">About Us</h2>
+          <h3>Experienced Full-Stack Developer</h3>
+          <p> I'm Selvaprakash from India, a skilled full-stack developer proficient in HTML, CSS, JavaScript (React, Angular), Node.js, and Python (Django). With a focus on creating seamless user experiences and scalable applications, I excel in dynamic, collaborative environments where innovation is key to success.</p>
+          <div class="width-50 mt-20">
+            <table cellspacing="8" cellpadding="8">
+              <tr>
+                <th>Name:</th>
+                <td>SelvaPrakash</td>
+              </tr>
+              <tr>
+                <th>Phone:</th>
+                <td>9786946972</td>
+              </tr>
+              <tr>
+                <th>Birthday:</th>
+                <td>24 September,2003</td>
+              </tr>
+              <tr>
+                <th>Study:</th>
+                <td>Karpagam University</td>
+              </tr>
+            </table>
+          </div>
+          <div class="width-50 mt-20">
+            <table cellspacing="8" cellpadding="8">
+              <tr>
+                <th>Email:</th>
+                <td>selvaprakash239@gmail.com</td>
+              </tr>
+              <tr>
+                <th>City:</th>
+                <td>Coimbatore</td>
+              </tr>
+              <tr>
+                <th>Freelancer:</th>
+                <td> Available</td>
+              </tr>
+              <tr>
+                <th>Website:</th>
+                <td> www.prakash engineering works.com</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------SKILL SECTION------>
+<div class="main-section">
+    <div class="container">
+      <h2 class="heading-text">My Skills</h2>
+      <div class="width-50">
+        <div class="skill">
+          <b>HTML</b>
+          <span>95%</span>
+          <div>
+            <span style="width:95%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>CSS</b>
+          <span>91%</span>
+          <div>
+            <span style="width:91%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>JavaScript</b>
+          <span>85%</span>
+          <div>
+            <span style="width:85%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>Python Programming</b>
+          <span>50%</span>
+          <div>
+            <span style="width:50%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>C Programming</b>
+          <span>79%</span>
+          <div>
+            <span style="width:79%"></span>
+          </div>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="width-50">
+          <div class="width-50">
+            <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="--value:85">Tableau</div>
+          </div>
+            <div class="width-50">
+            <div role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="--value:85">Power BI</div>
+          </div>
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:65">React</div>
+        </div>
+        <div class="width-50">
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:65">Node</div>
+        </div>
+        <div class="width-50">
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:65">R</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------SERVICE SECTION------>
+<div class="main-section">
+    <div class="container">
+      <h2 class="heading-text">My Service</h2>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-chrome"></i>
+          <h3>Web Development</h3>
+          <p>Offering comprehensive web development services focused on building robust, scalable, and user-friendly websites. Specializing in front-end and back-end development to bring your digital vision to life with efficiency and excellence.
+          </p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-chrome"></i>
+          <h3>Web Desgin </h3>
+          <p>Offering expert web design services tailored to your needs, ensuring visually appealing and user-friendly websites. Specializing in creating responsive designs that enhance user experience and drive engagement.
+          </p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-reddit"></i>
+          <h3>Creative Design</h3>
+          <p>Providing innovative creative design solutions that captivate audiences and elevate brands. Specializing in crafting unique visual identities and compelling graphic designs to meet diverse client needs.</p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-video-camera"></i>
+          <h3>Video Editing</h3>
+          <p>Delivering professional video editing services to enhance storytelling and engagement. Specializing in creating polished videos with impactful visuals and seamless transitions, tailored to meet your content needs.</p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-camera"></i>
+          <h3>Photography</h3>
+          <p>Providing captivating photography services that capture moments with creativity and precision. Specializing in portrait, event, and product photography to visually communicate your story and enhance your brand.</p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fa fa-apple"></i>
+          <h3>App Developing</h3>
+          <p>Offering dynamic app development services tailored to meet diverse user needs. Specializing in crafting user-friendly mobile applications with robust functionality and intuitive design to drive engagement and enhance user experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------TESTIMONIAL SECTION------>
+  <div class="main-section bg-lightgrey">
+    <div class="container">
+      <h2 class="heading-text">Certifications Achieved</h2>
+      
+      <div class="testimonial">
+        <div class="testimonial-content">
+          <div class="testimonial-img">
+            <img src="New folder/certification1.jpg" alt="Certification Image">
+          </div>
+          <i class="fa fa-quote-left"></i>
+          <p>Completed the 'Yoga for Youth Empowerment' foundation course at Vethathiri Maharishi Institute for Spiritual and Intuition Education, WCSC-VISION for Wisdom Academy.</p>
+          <div class="testimonial-name">
+            <h5>Yoga</h5>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial">
+        <div class="testimonial-content">
+          <div class="testimonial-img">
+            <img src="New folder/certification1.jpg" alt="Certification Image">
+          </div>
+          <i class="fa fa-quote-left"></i>
+          <p>I have achieved a Hindi Prathmic certification from Dakshina Bharat Hindi Prachar Sabha, Madras, securing Second Rank in the examination.</p>
+          <div class="testimonial-name">
+            <h5>Prathmic</h5>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial">
+        <div class="testimonial-content">
+          <div class="testimonial-img">
+            <img src="New folder/certification1.jpg" alt="Certification Image">
+          </div>
+          <i class="fa fa-quote-left"></i>
+          <p>I have achieved a Hindi Madhyama certification from Dakshina Bharat Hindi Prachar Sabha, Madras, securing Second Rank in the examination.</p>
+          <div class="testimonial-name">
+            <h5>Madhyama</h5>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  <!------PORTFOLIO SECTION------>
+  <div class="main-section">
+    <div class="container">
+      <h2 class="heading-text">My Projects</h2>
+  
+      <table class="projects-table">
+        <tr>
+          <td class="project-details">
+            <h2>Movie Mania</h2>
+            <p>"Movie Mania 🎬" is a React-based project powered by the OMDB API, designed to help users discover and explore a wide variety of movies. It showcases fundamental React concepts like components, JSX, useState & useEffect hooks, and utilizes Tailwind CSS for responsive and efficient styling.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="project-details">
+            <h2>Hospital Management Project</h2>
+            <p>The LIFE LINE Hospital Management project automates hospital operations, tracking staff, patients, wards, medical services, and appointments using Python, HTML, CSS, and JavaScript. It enhances patient care, safety, and confidentiality while reducing costs and manual processing. The system integrates information from all departments, providing critical data for efficient decision-making and maintaining comprehensive records of staff and patient details.</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  
+  <!-------------CONTACT US SECTION----------------------->
+<div class="main-section contact bg-lightgrey">
+    <div class="container">
+      <h2 class="heading-text">Get In Touch</h2>
+      <div class="width-100">
+        <form>
+          <input type="text" placeholder="Full Name...">
+          <input type="text" placeholder="Full Email Id...">
+          <input type="text" placeholder="Full Mobile No...">
+          <textarea placeholder="Enter Address..."></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="width-33">
+        <h3>
+          <i class="fa fa-map-marker"></i>
+        </h3>
+        <h4>Address</h4>
+        <p>3/151, West Thottam,Sungaramadakku, Pethappampatti, Udumalaipet.</p>
+      </div>
+      <div class="width-33">
+        <h3>
+          <i class="fa fa-phone"></i>
+        </h3>
+        <h4>Phone</h4>
+        <p>+91 9786946972</p>
+      </div>
+      <div class="width-33">
+        <h3>
+          <i class="fa fa-envelope-o"></i>
+        </h3>
+        <h4>Email</h4>
+        <p>selvaprakash239@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <!------FOOTER SECTION------>
+<div class="footer">
+    <div class="container">
+      <div class="footer-sect social-icon width-50">
+        <a href="https://www.facebook.com/selva.thangavel.900">  
+          <i class="fa fa-facebook"></i>
+          </a>
+          <!-- <a href="#">
+            <i class="fa fa-twitter"></i>
+          </a> -->
+          <a href="www.linkedin.com/in/selva-prakash-70a914267">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/selvakongu8658?igsh=cGdwZ2J4NnFvYjR5">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="https://github.com/selvapraksh8658">
+            <i class="fa fa-github"></i>
+          </a>
+      </div>
+      <div class="footer-sect mt-20 width-50"></div>
+    </div>
+  </div>
+  <section class="resume">
+        
+</section>
+ </body>
+ </html>
